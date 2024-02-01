@@ -37,6 +37,9 @@ class TV():
         self.channelIndex = self.channelIndex + 1
         if self.channelIndex == self.nChannels:
             self.channelIndex = 0  # wrap around to the first channel
+            
+    def currentChannel(self):
+        return self.channelList[self.channelIndex]
 
     def channelDown(self):
         if not self.isOn:
